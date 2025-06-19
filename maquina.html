@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presentación de Impresora 3D</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            overflow: hidden;
+        }
+
+        .container {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            animation: fadeIn 1s ease-in;
+        }
+
+        .slide {
+            display: none;
+            text-align: center;
+            animation: slideIn 1s ease-in-out;
+        }
+
+        .active {
+            display: block;
+        }
+
+        img {
+            max-width: 80%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: #666;
+            font-size: 1.2em;
+            margin: 0 20px;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(100%); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .navigation {
+            position: absolute;
+            bottom: 20px;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .nav-button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .nav-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="slide active">
+        <h1>Impresora 3D</h1>
+        <img src="image5.jpg" alt="Impresora 3D">
+        <p>Las impresoras 3D están revolucionando la forma en que creamos objetos.</p>
+    </div>
+    <div class="slide">
+        <h1>¿Cómo Funciona?</h1>
+        <img src="video4.gif" alt="Funcionamiento de la impresora 3D">
+        <p>Utilizan tecnología de adición para crear objetos capa por capa.</p>
+    </div>
+    <div class="slide">
+        <h1>Aplicaciones</h1>
+        <img src="aplicaciones.jpg" alt="Aplicaciones de la impresora 3D">
+        <p>Desde prototipos hasta piezas personalizadas en diversas industrias.</p>
+    </div>
+    <div class="navigation">
+        <button class="nav-button" onclick="prevSlide()">Anterior</button>
+        <button class="nav-button" onclick="nextSlide()">Siguiente</button>
+    </div>
+</div>
+
+<script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+
+    function showSlide(index) {
+        slides[currentSlide].classList.remove('active');
+        currentSlide = (index + slides.length) % slides.length;
+        slides[currentSlide].classList.add('active');
+    }
+
+    function nextSlide() {
+        showSlide(currentSlide + 1);
+    }
+
+    function prevSlide() {
+        showSlide(currentSlide - 1);
+    }
+</script>
+
+</body>
+</html>

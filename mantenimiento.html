@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicio de Mantenimiento</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background: #007BFF;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        .feature {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .feature img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .feature h2 {
+            margin: 10px 0;
+        }
+
+        .feature p {
+            font-size: 0.9em;
+        }
+
+        .feature:hover {
+            transform: scale(1.05);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #007BFF;
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Servicio de Mantenimiento de Máquinas CNC</h1>
+        <p>¡Mantén tu maquinaria en óptimas condiciones!</p>
+    </header>
+    
+    <section class="features">
+        <div class="feature">
+            <img src="cubierta.jpg" alt="Cubierta de máquina">
+            <h2>Nueva Cubierta</h2>
+            <p>Evita la acumulación de polvo en los componentes.</p>
+        </div>
+        <div class="feature">
+            <img src="servomotor.jpg" alt="Revisión de motores">
+            <h2>Revisión de Motores</h2>
+            <p>Funcionamiento suave, sin ruidos inusuales o vibraciones.</p>
+        </div>
+        <div class="feature">
+            <img src="cables.jpg" alt="Revisión de cables">
+            <h2>Revisión de Cables</h2>
+            <p>Asegúrate de que no haya daños visibles.</p>
+        </div>
+        <div class="feature">
+            <img src="lubricar.jpg" alt="Lubricación">
+            <h2>Lubricación</h2>
+            <p>Utilizamos el aceite o grasa recomendada por el fabricante.</p>
+        </div>
+        <div class="feature">
+            <img src="alineacion.jpg" alt="Husillos">
+            <h2>Nuevos Husillos</h2>
+            <p>Alineación correcta para garantizar precisión en los movimientos.</p>
+        </div>
+        <div class="feature">
+            <img src="calibracion.jpg" alt="Calibración">
+            <h2>Calibración de Precisión</h2>
+            <p>Asegúrate de que la máquina esté alineada correctamente.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>Contáctanos para más información sobre nuestros servicios.</p>
+    </footer>
+</body>
+</html>
